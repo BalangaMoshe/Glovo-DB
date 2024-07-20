@@ -31,7 +31,6 @@ public class ProduktService {
         var produkt = produktRepository.save(ProductConverter.toEntity(produktDto));
         return ProductConverter.toDto(produkt);
     }
-
     public ProduktDto update(ProduktDto produktDto) {
         return save(produktDto);
     }

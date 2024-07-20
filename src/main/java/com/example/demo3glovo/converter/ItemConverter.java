@@ -10,7 +10,7 @@ public class ItemConverter {
                 .id(itemEntity.getId())
                 .price(itemEntity.getPrice())
                 .quantity(itemEntity.getQuantity())
-                .produkt(itemEntity.getProdukt().getId()) // produktId
+                .produkt(itemEntity.getProdukt().getId())
                 .build();
     }
 
