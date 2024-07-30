@@ -15,4 +15,5 @@ public class ItemDto {
     private double price;
     private int quantity;
     private int produkt;
+    private String name;
 }

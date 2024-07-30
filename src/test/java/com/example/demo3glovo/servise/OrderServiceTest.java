@@ -4,7 +4,6 @@ import com.example.demo3glovo.converter.ItemConverter;
 import com.example.demo3glovo.converter.OrderConverter;
 import com.example.demo3glovo.dto.ItemDto;
 import com.example.demo3glovo.dto.OrderDto;
-import com.example.demo3glovo.entity.ItemEntity;
 import com.example.demo3glovo.entity.OrderEntity;
 import com.example.demo3glovo.repository.OrderRepository;
 import org.junit.jupiter.api.Test;
