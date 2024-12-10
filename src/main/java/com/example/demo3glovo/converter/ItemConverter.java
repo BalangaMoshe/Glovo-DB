@@ -10,16 +10,18 @@ public class ItemConverter {
                 .id(itemEntity.getId())
                 .price(itemEntity.getPrice())
                 .quantity(itemEntity.getQuantity())
-                .produkt(itemEntity.getProdukt().getId()) // produktId
+                .name(itemEntity.getName())
+                .produkt(itemEntity.getProdukt() != null ? itemEntity.getProdukt().getId() : 0)
                 .build();
     }
 
     public static ItemEntity toEntity(ItemDto itemDto) {
         return ItemEntity.builder()
-                .produkt(ProduktEntity.builder().id(itemDto.getProdukt()).build())
-                .quantity(itemDto.getQuantity())
                 .id(itemDto.getId())
                 .price(itemDto.getPrice())
+                .quantity(itemDto.getQuantity())
+                .name(itemDto.getName())
+                .produkt(itemDto.getProdukt() != 0 ? ProduktEntity.builder().id(itemDto.getProdukt()).build() : null)
                 .build();
     }
 }

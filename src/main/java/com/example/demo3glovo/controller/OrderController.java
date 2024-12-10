@@ -15,29 +15,20 @@ import java.util.List;
 public class OrderController {
     private final OrderService orderService;
     private final ItemService itemService;
-
     @GetMapping("/{id}")
     public OrderDto getOrder(@PathVariable int id) {
         return orderService.findById(id);
     }
-
     @PostMapping
     public OrderDto save(@RequestBody OrderDto orderDto) {
         return orderService.save(orderDto);
     }
-
     @PostMapping("/{orderId}/items")
     public OrderDto addItem(@PathVariable int orderId, @RequestBody ItemDto itemDto) {
         return orderService.addItem(orderId, itemDto);
     }
-
     @GetMapping("/{orderId}/items")
     public List<ItemDto> getItems(@PathVariable int orderId) {
         return itemService.findByOrderId(orderId);
-    }
-
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable int id) {
-        orderService.delete(id);
     }
 }

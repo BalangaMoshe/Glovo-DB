@@ -12,7 +12,6 @@ public class ProductConverter {
                 .price(produktEntity.getPrice())
                 .build();
     }
-
     public static ProduktEntity toEntity(ProduktDto produktDto) {
         return ProduktEntity.builder()
                 .id(produktDto.getId())

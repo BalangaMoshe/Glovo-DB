@@ -10,8 +10,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ItemDto {
+
     private int id;
     private double price;
     private int quantity;
     private int produkt;
+    private String name;
 }
